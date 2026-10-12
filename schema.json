@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Soi Sacré – Rituel du jour – API contract",
+  "definitions": {
+    "RitualRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["energy", "time_minutes", "weighs", "desire"],
+      "properties": {
+        "energy": { "enum": ["epuisee", "fatiguee", "ca_va", "pleine_energie"] },
+        "time_minutes": { "enum": [2, 5, 10] },
+        "weighs": {
+          "type": "array",
+          "maxItems": 5,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "surcharge_mentale",
+              "manque_de_temps",
+              "culpabilite_de_me_poser",
+              "fatigue_physique",
+              "autre"
+            ]
+          }
+        },
+        "free_text": { "type": "string", "maxLength": 150 },
+        "desire": {
+          "enum": ["douceur_beaute", "respiration_calme", "recentrage", "energie_motivation"]
+        },
+        "language": { "enum": ["fr", "en"], "default": "fr" }
+      }
+    },
+    "RitualResponse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "title", "reassurance", "total_duration_minutes", "steps", "beauty_gesture", "mantra"],
+      "properties": {
+        "status": { "const": "ritual" },
+        "title": { "type": "string", "maxLength": 60 },
+        "reassurance": { "type": "string", "maxLength": 240 },
+        "total_duration_minutes": { "enum": [2, 5, 10] },
+        "steps": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 5,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["action", "duration_minutes"],
+            "properties": {
+              "action": { "type": "string", "maxLength": 140 },
+              "duration_minutes": { "type": "number", "exclusiveMinimum": 0 }
+            }
+          }
+        },
+        "beauty_gesture": { "type": "string", "maxLength": 180 },
+        "mantra": { "type": "string", "maxLength": 100 }
+      }
+    },
+    "CareResponse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "message", "suggestion"],
+      "properties": {
+        "status": { "const": "care" },
+        "message": { "type": "string", "maxLength": 500 },
+        "suggestion": { "type": "string", "maxLength": 300 }
+      }
+    },
+    "ErrorResponse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "message"],
+      "properties": {
+        "status": { "const": "error" },
+        "message": { "type": "string" }
+      }
+    }
+  },
+  "oneOf": [
+    { "$ref": "#/definitions/RitualResponse" },
+    { "$ref": "#/definitions/CareResponse" },
+    { "$ref": "#/definitions/ErrorResponse" }
+  ]
+}
