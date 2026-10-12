@@ -70,3 +70,28 @@ def test_validator_catches_problems():
     r = guardrails.fallback_ritual(5)
     r["beauty_gesture"] = "Prends ce médicament pour te détendre."
     assert guardrails.validate_ritual(r, 5)
+
+
+def test_medical_question_never_returns_medical_advice():
+    r = client.post(
+        "/api/ritual",
+        json={**BASE, "free_text": "j'ai des douleurs, quel médicament ?"},
+    )
+    assert r.status_code == 200
+    assert r.json()["status"] in ("ritual", "care")
+    response_text = str(r.json()).lower()
+    for term in ("médicament", "medicament", "antidépresseur", "antidepresseur"):
+        assert term not in response_text
+
+
+def test_care_response_includes_immediate_danger_guidance():
+    fr = guardrails.care_response("fr")
+    en = guardrails.care_response("en")
+
+    assert fr["status"] == "care"
+    assert "danger immédiat" in fr["suggestion"]
+    assert "services d'urgence locaux" in fr["suggestion"]
+
+    assert en["status"] == "care"
+    assert "immediate danger" in en["suggestion"]
+    assert "local emergency services" in en["suggestion"]

@@ -141,10 +141,29 @@ _CARE = {
 def care_response(lang: str = "fr") -> dict:
     base = _CARE.get(lang, _CARE["fr"])
     suggestion = base["suggestion"]
-    helpline = os.getenv("HELPLINE_TEXT", "").strip()  # verified local resource, set by the team
+
+    urgent_text = {
+        "fr": (
+            "Si tu es en danger immédiat, éloigne-toi du danger si tu peux "
+            "le faire sans risque et contacte les services d'urgence locaux."
+        ),
+        "en": (
+            "If you are in immediate danger, move away from the danger if "
+            "you can do so safely and contact local emergency services."
+        ),
+    }
+
+    suggestion = f"{suggestion} {urgent_text.get(lang, urgent_text['fr'])}"
+
+    helpline = os.getenv("HELPLINE_TEXT", "").strip()
     if helpline:
         suggestion = f"{suggestion} {helpline}"
-    return {"status": "care", "message": base["message"], "suggestion": suggestion}
+
+    return {
+        "status": "care",
+        "message": base["message"],
+        "suggestion": suggestion,
+    }
 
 
 # ---------------------------------------------------------------- fallback rituals
