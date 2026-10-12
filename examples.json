@@ -1,0 +1,295 @@
+{
+  "description": "Real API request/response examples",
+  "examples": [
+    {
+      "input": {
+        "energy": "epuisee",
+        "time_minutes": 2,
+        "weighs": [
+          "surcharge_mentale"
+        ],
+        "free_text": "Je me sens dépassée et j'ai besoin de douceur.",
+        "desire": "douceur_beaute",
+        "language": "fr"
+      },
+      "output": {
+        "status": "ritual",
+        "title": "Parenthèse de velours",
+        "reassurance": "Rien n'attend dans cet instant. Dépose le poids de tes pensées et laisse le monde tourner sans toi.",
+        "total_duration_minutes": 2,
+        "steps": [
+          {
+            "action": "Ferme doucement les yeux, assise confortablement, et relâche les épaules vers le sol.",
+            "duration_minutes": 0.5
+          },
+          {
+            "action": "Pose tes mains à plat sur ton cœur et sens le rythme apaisé de ton souffle.",
+            "duration_minutes": 1
+          },
+          {
+            "action": "Ouvre lentement les yeux en accueillant cette sensation de calme dans tout ton corps.",
+            "duration_minutes": 0.5
+          }
+        ],
+        "beauty_gesture": "Applique une noisette de crème sur tes mains et masse délicatement la paume avec tes pouces.",
+        "mantra": "Je m'accorde cette douceur infinie et je respire."
+      },
+      "source": "llm"
+    },
+    {
+      "input": {
+        "energy": "fatiguee",
+        "time_minutes": 5,
+        "weighs": [
+          "fatigue_physique"
+        ],
+        "free_text": "J'ai besoin de ralentir aujourd'hui.",
+        "desire": "respiration_calme",
+        "language": "fr"
+      },
+      "output": {
+        "status": "ritual",
+        "title": "Le souffle du repos",
+        "reassurance": "Ton corps porte beaucoup aujourd'hui. Accorde-toi cet instant de pause sans rien attendre de toi-même.",
+        "total_duration_minutes": 5,
+        "steps": [
+          {
+            "action": "Installe-toi confortablement, assise ou allongée, et ferme doucement les yeux.",
+            "duration_minutes": 1
+          },
+          {
+            "action": "Pose une main sur ton ventre et laisse chaque expiration relâcher tes épaules.",
+            "duration_minutes": 2
+          },
+          {
+            "action": "Respire à ton rythme naturel en sentant simplement le calme s'installer dans ton corps.",
+            "duration_minutes": 2
+          }
+        ],
+        "beauty_gesture": "Passe lentement le bout de tes doigts sur tes tempes pour inviter ton visage à se détendre.",
+        "mantra": "Ici et maintenant, j'accueille le calme en moi"
+      },
+      "source": "llm"
+    },
+    {
+      "input": {
+        "energy": "ca_va",
+        "time_minutes": 5,
+        "weighs": [
+          "manque_de_temps"
+        ],
+        "free_text": "Je veux prendre soin de moi malgré une journée chargée.",
+        "desire": "recentrage",
+        "language": "fr"
+      },
+      "output": {
+        "status": "ritual",
+        "title": "L'instant suspendu",
+        "reassurance": "Cinq minutes suffisent pour retrouver ton propre rythme. Le reste de la journée peut attendre cet instant.",
+        "total_duration_minutes": 5,
+        "steps": [
+          {
+            "action": "Pose les mains sur la poitrine, ferme les yeux et prends trois respirations amples sans te presser.",
+            "duration_minutes": 1
+          },
+          {
+            "action": "Laisse tes épaules descendre et relâche chaque petite tension autour des yeux et du front.",
+            "duration_minutes": 2
+          },
+          {
+            "action": "Ouvre doucement le regard et savoure cette sensation d'immobilité retrouvée avant de reprendre ton cours.",
+            "duration_minutes": 2
+          }
+        ],
+        "beauty_gesture": "Masse délicatement tes tempes du bout des doigts en effectuant de lents cercles apaisants.",
+        "mantra": "Je choisis de revenir à moi en toute simplicité."
+      },
+      "source": "llm"
+    },
+    {
+      "input": {
+        "energy": "pleine_energie",
+        "time_minutes": 10,
+        "weighs": [],
+        "free_text": "J'ai envie d'un moment rien que pour moi.",
+        "desire": "energie_motivation",
+        "language": "fr"
+      },
+      "output": {
+        "status": "ritual",
+        "title": "Élan solaire et présence",
+        "reassurance": "Ce temps t'appartient pleinement. Accueille ton élan naturel et savoure cet espace dédié à toi seule.",
+        "total_duration_minutes": 10,
+        "steps": [
+          {
+            "action": "Debout, étire lentement les bras vers le ciel en respirant amplement pour réveiller le corps.",
+            "duration_minutes": 2
+          },
+          {
+            "action": "Frotte tes paumes pour créer de la chaleur, puis dépose-les doucement sur ta poitrine.",
+            "duration_minutes": 2
+          },
+          {
+            "action": "Prends plusieurs inspirations profondes en visualisant la vitalité qui circule librement en toi.",
+            "duration_minutes": 3
+          },
+          {
+            "action": "Marche quelques instants d'un pas assuré, en ressentant l'ancrage de tes pieds sur le sol.",
+            "duration_minutes": 3
+          }
+        ],
+        "beauty_gesture": "Passe de l'eau fraîche sur tes poignets et ton visage pour stimuler délicatement ton éclat naturel.",
+        "mantra": "Je célèbre mon énergie et j'honore mon propre rythme."
+      },
+      "source": "llm"
+    },
+    {
+      "input": {
+        "energy": "epuisee",
+        "time_minutes": 5,
+        "weighs": [
+          "culpabilite_de_me_poser"
+        ],
+        "free_text": "J'ai du mal à m'autoriser une pause.",
+        "desire": "respiration_calme",
+        "language": "fr"
+      },
+      "output": {
+        "status": "ritual",
+        "title": "Parenthèse d'air et de douceur",
+        "reassurance": "Le repos n'est pas une récompense à mériter, c'est un espace vital. Tu as toute la légitimité de t'arrêter ici.",
+        "total_duration_minutes": 5,
+        "steps": [
+          {
+            "action": "Assieds-toi confortablement, ferme doucement les yeux et laisse tes épaules s'abaisser vers le sol.",
+            "duration_minutes": 1
+          },
+          {
+            "action": "Inspire lentement par le nez, puis souffle longuement par la bouche comme pour déposer un fardeau.",
+            "duration_minutes": 2
+          },
+          {
+            "action": "Pose une main sur ta poitrine et respire à ton propre rythme, sans rien forcer.",
+            "duration_minutes": 2
+          }
+        ],
+        "beauty_gesture": "Pose délicatement la paume de tes mains tièdes sur tes yeux fermés pour détendre ton regard et ton front.",
+        "mantra": "Je m'accorde le droit de ralentir et d'exister simplement."
+      },
+      "source": "llm"
+    },
+    {
+      "input": {
+        "energy": "fatiguee",
+        "time_minutes": 2,
+        "weighs": [
+          "surcharge_mentale"
+        ],
+        "free_text": "J'ai beaucoup de pensées en tête.",
+        "desire": "recentrage",
+        "language": "fr"
+      },
+      "output": {
+        "status": "ritual",
+        "title": "Un souffle d'ancrage",
+        "reassurance": "Dépose tout ce qui pèse pour ces deux minutes. Rien d'autre ne demande ton attention maintenant.",
+        "total_duration_minutes": 2,
+        "steps": [
+          {
+            "action": "Ferme doucement les yeux et relâche le poids de tes épaules.",
+            "duration_minutes": 0.5
+          },
+          {
+            "action": "Inspire lentement par le nez, puis expire longuement en laissant s'éloigner les pensées.",
+            "duration_minutes": 1
+          },
+          {
+            "action": "Pose une main sur ta poitrine pour sentir les battements calmes de ton cœur.",
+            "duration_minutes": 0.5
+          }
+        ],
+        "beauty_gesture": "Lisse délicatement tes tempes avec le bout des doigts pour dénouer les tensions du front.",
+        "mantra": "Ici et maintenant, je reviens à moi."
+      },
+      "source": "llm"
+    },
+    {
+      "input": {
+        "energy": "ca_va",
+        "time_minutes": 10,
+        "weighs": [
+          "autre"
+        ],
+        "free_text": "Je voudrais retrouver un peu de confiance.",
+        "desire": "douceur_beaute",
+        "language": "fr"
+      },
+      "output": {
+        "status": "ritual",
+        "title": "Éclat d'une présence douce",
+        "reassurance": "Ce temps t'appartient entièrement. Tu peux déposer toute attente et simplement savourer ta propre présence.",
+        "total_duration_minutes": 10,
+        "steps": [
+          {
+            "action": "Installe-toi confortablement, ferme les yeux et laisse tes épaules s'abaisser doucement au rythme de ton souffle.",
+            "duration_minutes": 2
+          },
+          {
+            "action": "Frotte lentement tes mains l'une contre l'autre pour créer de la tiédeur, puis dépose-les sur ton cœur.",
+            "duration_minutes": 3
+          },
+          {
+            "action": "Ouvre les yeux devant un miroir et offre-toi un regard bienveillant, comme à une amie très chère.",
+            "duration_minutes": 3
+          },
+          {
+            "action": "Respire profondément trois fois en laissant cette douceur s'installer dans chaque partie de ton corps.",
+            "duration_minutes": 2
+          }
+        ],
+        "beauty_gesture": "Applique une goutte de crème sur tes tempes et masse lentement par de petits mouvements circulaires apaisants.",
+        "mantra": "Je m'accueille telle que je suis avec douceur"
+      },
+      "source": "llm"
+    },
+    {
+      "input": {
+        "energy": "pleine_energie",
+        "time_minutes": 5,
+        "weighs": [
+          "manque_de_temps"
+        ],
+        "free_text": "Je veux commencer ma journée avec une bonne intention.",
+        "desire": "energie_motivation",
+        "language": "fr"
+      },
+      "output": {
+        "status": "ritual",
+        "total_duration_minutes": 5,
+        "title": "Une pause lumineuse",
+        "reassurance": "Prendre soin de toi n'est pas une tâche de plus. C'est une permission que tu peux t'offrir.",
+        "steps": [
+          {
+            "action": "Installe-toi confortablement et relâche ta mâchoire.",
+            "duration_minutes": 1
+          },
+          {
+            "action": "Savoure lentement une gorgée d'eau ou de thé.",
+            "duration_minutes": 1
+          },
+          {
+            "action": "Inspire sur quatre temps, expire sur six, au rythme qui te va.",
+            "duration_minutes": 2
+          },
+          {
+            "action": "Masse tes mains avec une crème, doigt après doigt.",
+            "duration_minutes": 1
+          }
+        ],
+        "beauty_gesture": "Un massage des mains, lent et enveloppant, avec ta crème préférée.",
+        "mantra": "Je mérite la douceur, maintenant."
+      },
+      "source": "fallback"
+    }
+  ]
+}
