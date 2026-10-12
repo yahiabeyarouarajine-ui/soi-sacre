@@ -1,3 +1,4 @@
+
 # Soi Sacré
 
 **A digital beauty and wellbeing experience that makes self-care feel like permission, not a task.**
@@ -153,3 +154,5 @@ python3 -m pytest
 **Current focus:** AI backend, response structure, safety documentation, and preparation of the technical assets for the MVP.
 
 The complete product experience—including the Figma-designed interface, ritual-card export, and additional user-facing states—is part of the wider MVP scope and should be considered implemented only when those components are completed and tested.
+
+
