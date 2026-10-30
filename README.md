@@ -155,4 +155,7 @@ python3 -m pytest
 
 The complete product experience—including the Figma-designed interface, ritual-card export, and additional user-facing states—is part of the wider MVP scope and should be considered implemented only when those components are completed and tested.
 
-
+## Team & Roles
+•⁠  ⁠*Amel*: Product Lead, Brand Vision, and UI/UX Design (Canva prototype & interface).
+•⁠  ⁠*Lyna*: UI/UX Design support.
+•⁠  ⁠*Aroua*: AI & Prompt backend development.
